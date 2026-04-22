@@ -14,4 +14,4 @@ RoxygenNote: 7.3.2
 Depends: 
     R (>= 4.1.0)
 Imports: 
-    CSHShydrology,pracma,ppclust,odetector,fcvalid,rrcov,POT,DescTools,tscount,outliers,CircStats,ciruclar,movMF,plotrix,MGBT,Hmisc,grDevices
+    CSHShydRology,pracma,ppclust,odetector,fcvalid,rrcov,POT,DescTools,tscount,outliers,CircStats,circular,movMF,plotrix,MGBT,Hmisc,grDevices

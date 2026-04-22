@@ -72,6 +72,13 @@ generate a flood frequency plot with symbols indicating whether an observation i
 high or low outlier, and colour symbols indicating month of the year in which the flood
 occurred.
 }
+\examples{
+\donttest{
+# Not tested automatically as can be very slow to execute
+data(CAN05AA008)
+amax <- ch_get_amax(CAN05AA008)
+ch_ffa_screen_plot(amax)}
+}
 \references{
 Cohn, T. A., J. F. England, C. E. Berenbrock, R. R. Mason, J. R.
 Stedinger and J. R. Lamontagne (2013). "A generalized Grubbs‐Beck test statistic

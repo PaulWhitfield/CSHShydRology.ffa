@@ -80,6 +80,10 @@ The plots are shown in Whitfield and Burn (2025b)
 \donttest{}
 
 }
+\references{
+Whitfield, P. H. and D. H. Burn (2025*). "Screening Annual Maxima and
+Peaks-Over-Threshold Series for Flood Frequency Analysis."
+}
 \author{
 modified by Paul Whitfield original from POT
 }

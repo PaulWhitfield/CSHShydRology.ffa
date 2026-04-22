@@ -17,7 +17,7 @@
 #' @param alpha a confidence limit.
 #'
 #' @return a list containing
-#' \describe{
+#' \itemize{
 #'   \item (mu) (circular number of mean directions)
 #'   \item (ventana) (circular number of window)
 #'   \item (muini) (circular number initial value of mu )
@@ -28,6 +28,7 @@
 #'   \item (isout) (sequential indexes of outlier wherein 0 is an outlier and a 1 is not)
 #'   \item (porcout) (proportion of outliers in sample)
 #'  }
+#'
 #' @references
 #' Sau, M.F., and D. Rodriguez. 2018. "Minimum distance method for
 #' directional data and outlier detection."  Advances in Data Analysis
@@ -36,9 +37,9 @@
 #' Ko D (1992) Robust estimation of the concentration parameter of the von Mises-Fisher
 #' distribution. Ann Stat 20:917–928
 #'
-#' Whitfield, P. H. and D. H. Burn (2025 in review). "Screening Annual Maxima and
-#' Peaks-Over-Threshold Series for Flood Frequency Analysis."
-
+#' Whitfield, P. H. and D. H. Burn (2026 in review). "Technical Note: A Visual
+#' Diagnostic Framework for Identifying Non-Stationarity and Mixed Populations in Flood Series"
+#'
 #'
 #' @import CircStats
 #' @import circular
@@ -52,9 +53,7 @@
 #' result <- SR_hstat(data1, alpha)
 #' result$isout # lists the outliers with 0 being an outlier and 1 not.
 
-require(CircStats)
-require(circular)
-require(movMF)
+
 ######################### Text from original set of functions
 #FUNCTIONS
 ##M?nima distancia para un h m?nimo

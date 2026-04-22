@@ -35,7 +35,7 @@
 #'
 #' @export
 #'
-#' @reference
+#' @references
 #' Whitfield, P. H. and D. H. Burn (2025*). "Screening Annual Maxima and
 #' Peaks-Over-Threshold Series for Flood Frequency Analysis."
 #'

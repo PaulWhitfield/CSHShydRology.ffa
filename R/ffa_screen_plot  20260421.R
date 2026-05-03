@@ -806,7 +806,7 @@ par(mar = c(6,3,3,2))
         ################# try from 2 to 5 clusters
 
         c1 <- 2  #Starting number of clusters
-        c2 <- 5  #Final number of clusters
+        c2 <- 4  #Final number of clusters
         indnames <- c("PC","MPC","PE","XB","Kwon", "TSS", "CL", "FS", "PBMF","FSIL","FHV", "APD")
         indvals <- matrix(ncol=length(indnames), nrow=(c2-c1+1))
         colnames(indvals) <- indnames

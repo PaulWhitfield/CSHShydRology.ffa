@@ -47,7 +47,7 @@ low, normal, and high values}
 }
 \value{
 a list containing
-\describe{
+\itemize{
   \item (station) (stationID)
   \item (nyears) (number of years of data)
   \item (maxQ) (maximum flow - Flood of Record)
@@ -87,6 +87,6 @@ Water Resources Research 49(8): 5047-5058 10.1002/wrcr.20392: 10.1002/wrcr.20392
 
 Sau, M. F. and D. Rodriguez (2018). "Minimum distance method for directional data and outlier detection." Advances in Data Analysis and Classification 12: 587-603 DOI: 10.1007/s11634-017-0287-9.
 
-Whitfield, P. H. and D. H. Burn (2025*). "Extreme and Rogue Floods in North America."
-Journal of Hydrology. in review.
+Whitfield, P. H. and D. H. Burn (2026). "Extreme and Rogue Floods in North America."
+Journal of Hydrology.
 }

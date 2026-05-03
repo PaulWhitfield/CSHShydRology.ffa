@@ -13,7 +13,7 @@ SR_hstat(x, alpha = 0.05)
 }
 \value{
 a list containing
-\describe{
+\itemize{
   \item (mu) (circular number of mean directions)
   \item (ventana) (circular number of window)
   \item (muini) (circular number initial value of mu )
@@ -53,8 +53,8 @@ and Classification 12:587-603.
 Ko D (1992) Robust estimation of the concentration parameter of the von Mises-Fisher
 distribution. Ann Stat 20:917–928
 
-Whitfield, P. H. and D. H. Burn (2025 in review). "Screening Annual Maxima and
-Peaks-Over-Threshold Series for Flood Frequency Analysis."
+Whitfield, P. H. and D. H. Burn (2026 in review). "Technical Note: A Visual
+Diagnostic Framework for Identifying Non-Stationarity and Mixed Populations in Flood Series"
 }
 \author{
 Mercedes Fernandez Sau, Daniela Rodrigues, Paul Whitfield

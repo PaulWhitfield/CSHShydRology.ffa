@@ -13,6 +13,7 @@
 #' @param kthresh kappa threshold default is 5
 #' @param mcol array of three colours, default is c("orange", "gray70", "red") use to emphasize
 #' low, normal, and high values
+#' @param myr_col two colours to be used for missing years and years without a POT ("pink2","pink2")
 #' @param n default is 12, number of colours for number of months
 #' @param m smallest angle in radians parameter for generating circular colours default = 0
 #' @param M largest angle in radians parameter for generating circular colours default = 2 (*pi)
@@ -53,14 +54,22 @@
 #' Journal of Hydrology.
 #'
 #'
-#' @importFrom pracma rad2deg
+
 #' @import circular
 #' @import plotrix
 #' @import CSHShydRology
+#' @import ppclust
+#' @import odetector
+#' @import fcvalid
+#' @import rrcov
+#' @import POT
+#' @import tscount
+#' @importFrom pracma rad2deg
 #' @importFrom MGBT MGBT
 #' @importFrom outliers grubbs.test
 #' @importFrom DescTools IsLeapYear
 #' @importFrom Hmisc subplot
+
 #'
 #' @export
 #'@examples \donttest{
@@ -71,14 +80,16 @@
 
 
 
-ch_ffa_screen_plot <- function (df, mtitle = NULL, stn,
+ch_ffa_screen_plot <- function (df, mtitle = NULL, stn = NULL,
                                 polar = TRUE,
                                 kthresh = 5,
                                 thresh = NULL,
                                 n = 12, m = 0, M = 2, offset = 0,
                                 trans = "log",
-                      mcol = c( "orange","gray60", "red", "darkred"))
+                      mcol = c( "orange","gray60", "red", "darkred"),
+                      myr_col = c("pink2", "pink2"))
   {
+
 
 
   ##### determine type of data
@@ -218,7 +229,8 @@ if(AMAX)
 
 
   for (jj in 1: length(missyear)){
-    abline( v = missyear, col = "pink2", lwd = 1.7)
+    if(AMAX) abline( v = missyear, col = myr_col[1], lwd = 1.7)
+    if(POT)  abline( v = missyear, col = myr_col[2], lwd = 1.7)
   }
 
 
@@ -415,10 +427,10 @@ if(AMAX){
     points(y,Q, pch = sr_pch[isout], cex = mcex[mcode]*1.1,
            font = 2, col = mcol[4])
 
-
+if(!is.null(mtitle)){
     if (nchar(mtitle) <= 50) title(main = mtitle)
     if (nchar(mtitle) > 50) title(main = mtitle, cex.main = 0.95)
-
+}
     axis(1, at = ytick, labels = as.character(xtlab), cex = 0.65)
 
 

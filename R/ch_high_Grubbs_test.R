@@ -45,5 +45,5 @@ for (li in 1:15) {
 
 # sort the result into original sequence
 tdata  <- tdata1[order(tdata1$tindex, decreasing = FALSE), ]
-return (tdata)
+return (tdata$tout)
 }

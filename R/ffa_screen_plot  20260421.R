@@ -11,8 +11,11 @@
 #' @param polar produces a polar plot if polar = TRUE default.
 #' @param thresh POT threshold default is NULL
 #' @param kthresh kappa threshold default is 5
-#' @param mcol array of three colours, default is c("orange", "gray70", "red") use to emphasize
-#' low, normal, and high values
+#' @param mpch array of four values for symbols for low, normal, high and timing outliers.
+#' @param mcol array of four colours, default is c("orange", "gray70", "red", "darkred") use to emphasize
+#' low, normal, and high values, and timing outliers
+#' @param mcex array of four values for symbols sizes for low, normal, high and timing outliers.
+#' @param sr_pch array of two symbol values for Sau-Rodrigues timing outliers, default is (NA,8)
 #' @param myr_col two colours to be used for missing years and years without a POT ("pink2","pink2")
 #' @param n default is 12, number of colours for number of months
 #' @param m smallest angle in radians parameter for generating circular colours default = 0
@@ -84,9 +87,13 @@ ch_ffa_screen_plot <- function (df, mtitle = NULL, stn = NULL,
                                 polar = TRUE,
                                 kthresh = 5,
                                 thresh = NULL,
+                                layout = "std",
                                 n = 12, m = 0, M = 2, offset = 0,
                                 trans = "log",
                       mcol = c( "orange","gray60", "red", "darkred"),
+                      mpch = c(22, 21, 24, 8 ),
+                      mcex = c(1.20, 0.9, 1.20, NA),
+                      sr_pch = c( NA, 8),
                       myr_col = c("pink2", "pink2"))
   {
 
@@ -361,9 +368,7 @@ qcol = c("darkblue",  "blue", "red", "orange", "red",
 qpch = c(1, 19,  24, 22, 15, 11, 12, 19)
 qcex = c(0.7, 1.1, 1.1, 1.1, 1.1, 1.0, 1.1, 1.1, 1.1, 0.6)
 
-sr_pch <- c( NA, 8)
-mpch <- c(22, 21, 24, 8 )
-mcex <- c(1.20, 0.9, 1.20)
+
 
 ccol <- ch_circular_colors(n=12, m = m, M = M*pi)
  par(xpd = FALSE)
